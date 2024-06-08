@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Mi Registro de Usuario</title>
+</head>
+<body>
+<div style="background-color:black;" class="center-form">
+    <div style="padding:40px; width:50%" class="card form-container">
+            REGISTRO DE USUARIO
+        </div>
+        <div class="card-body">
+            <form th:action="@{/auth/guardarUsuario}" method="post">
+                <div class="mb-3">
+                    <label for="nombres" class="form-label">NOMBRES</label>
+                    <input type="text" class="form-control" name="nombres" required id="nombres">
+                </div>
+                <div class="mb-3">
+                    <label for="apellidos" class="form-label">APELLIDOS</label>
+                    <input type="text" class="form-control" name="apellidos" required id="apellidos">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">EMAIL</label>
+                    <input type="text" class="form-control" name="email" required id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="nomusuario" class="form-label">USUARIO</label>
+                    <input type="text" class="form-control" name="nomusuario" required id="nomusuario">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">CONTRASEÑA</label>
+                    <input type="password" class="form-control" name="password"  required id="password">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-dark" th:href="@{/auth/login}" role="button"><i class="fas fa-sign-in-alt"></i> REGRESAR AL LOGIN</a>
+                    <button type="submit" id="btnregistrar" class="btn btn-dark">
+                        <i class="fas fa-save"></i> GUARDAR
+                    </button>
+                </div>
+            </form>
+        </div>
+</div>
+
+</body>
+</html>
