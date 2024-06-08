@@ -9,6 +9,8 @@ import pe.edu.cibertec.DAWII_T1_ORTIZLUIS.model.dto.ResultadoDto;
 import pe.edu.cibertec.DAWII_T1_ORTIZLUIS.model.dto.UsuarioDto;
 import pe.edu.cibertec.DAWII_T1_ORTIZLUIS.service.UsuarioService;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Controller
 @RequestMapping("/seguridad")
